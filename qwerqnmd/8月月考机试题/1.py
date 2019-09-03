@@ -16,7 +16,7 @@ if __name__ == '__main__':
     q = MyProcess('哈哈哈')
     q.start()
 
-# 函数
+# 函数方法
 
 
 def shushu(x,y):
