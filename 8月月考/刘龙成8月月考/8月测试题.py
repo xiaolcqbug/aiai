@@ -1,4 +1,5 @@
 from multiprocessing import Process
+from threading import Thread
 from multiprocessing import Queue
 from time import sleep
 
@@ -26,6 +27,33 @@ class Pro(Process):
 if __name__ == '__main__':
     p2 = Pro(2)
     p2.start()
+
+
+##################################################################
+
+
+def task(i):
+    print(i)
+
+
+if __name__ == '__main__':
+    t1 = Thread(target=task, args=(1,))
+    t1.start()
+
+
+class Thr(Thread):
+
+    def __init__(self, i):
+        Thread.__init__(self)
+        self.i = i
+
+    def run(self):
+        print(self.i)
+
+
+if __name__ == '__main__':
+    t2 = Thr(2)
+    t2.start()
 
 
 ##################################################################
