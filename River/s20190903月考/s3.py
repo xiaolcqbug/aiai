@@ -16,3 +16,6 @@ if __name__=='__main__':
     p1.start()
     p2=Process(target=task2)
     p2.start()
+    p1.join()
+    p2.join()
+    print(a)
