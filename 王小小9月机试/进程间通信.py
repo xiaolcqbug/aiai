@@ -1,6 +1,7 @@
 from multiprocessing import Process
 from multiprocessing import Queue
 from time import *
+
 def task1(a):
     b = a.get()
     for i in range(10):
