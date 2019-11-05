@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3546783226,4183246390&fm=26&gp=0.jpg");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+<a href="/newblog">新建</a>
+{% for row in content %}
+    {#    {{ row }}#}
+    <div>
+        <a href="/blog/{{ row[0] }}"><h2>{{ row[1] }}</h2></a>
+        <h3>{{ row[2] }}</h3>
+        <h4>{{ row[3] }}</h4>
+        <br></div>
+
+
+{% endfor %}
+</body>
+</html>
