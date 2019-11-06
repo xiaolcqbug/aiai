@@ -41,12 +41,13 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r %s>' % self.username, self.password
-db.create_all()#
-# def commit(title,username,content):
-#     blog = User(title, username, content)
-#     db.session.add(blog)
-#     db.session.commit()
-#     return True
+# db.create_all()#
+def commit(username,password):
+    blog = User( username, password)
+    db.session.add(blog)
+    db.session.commit()
+    return True
+commit('abc','123')
 #
 # commit('永夜君王','烟雨江南','''永夜大陆大部分时间都是暮色昏昏，特别到了暗季，上层大陆的运行轨道遮挡住阳光，白昼只有短短的几个小时。今夜双子阿尔法星转入近地轨道，是个难得有月亮的晚上。''')
 # commit('静夜思','李白','''床前明月光，疑是地上霜。举头望明月，低头思故乡。''')
